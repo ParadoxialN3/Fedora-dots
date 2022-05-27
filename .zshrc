@@ -1,7 +1,7 @@
 # This is my humble zsh configuration, with my set of plugins and my prompt. Has some creature comforts like syntax highlighting and autocomplete but pretty slim 
 
 # Add binary paths
-export PATH="$HOME/.cargo/bin=$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # History in histfile
 HISTFILE=~/.histfile
@@ -18,7 +18,6 @@ _comp_options+=(globdots)		# Include hidden files.
 # Sourcing Plugins to zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # Add the funny ZSH theme
 eval "$(starship init zsh)"
