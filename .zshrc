@@ -1,37 +1,45 @@
-# This is my humble zsh configuration, with my set of plugins and my prompt. Has some creature comforts like syntax highlighting and autocomplete but pretty slim 
-
-# Add binary paths
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # History in histfile
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
 
-# Basic auto/tab complete:
+# Making FZF able to search hidden files
+export FZF_DEFAULT_COMMAND="find -L"
+
+# Basic auto/tab complete (stolen from Luke Smith yes) :
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)		# Include hidden files.
+_comp_options+=(globdots)
+
+# vim mode is sexy
+set -o vi
+export KEYTIMEOUT=1
 
 # Sourcing Plugins to zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/zsh-git-prompt/zshrc.sh
+source $HOME/.zsh/ohmyzsh/lib/git.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Prompt
+PROMPT='[%*] %{$fg[cyan]%}%n%{$reset_color%}:%{$fg[green]%}%c%{$reset_color%}$(git_prompt_info) %(!.#.$) '
 
-# Add the funny ZSH theme
-eval "$(starship init zsh)"
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}git:("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
 
 # My Aliases
+alias vi="nvim"
 alias vim="nvim"
-alias ls="lsd"
+alias ls="lsd -a"
+alias nixconfig="sudo nvim /etc/nixos/configuration.nix"
+alias nixrebuild="sudo nixos-rebuild switch"
+alias viminit="nvim $HOME/.config/nvim/init.vim"
+alias nixbuild="sudo nixos-rebuild build"
 alias l="ls -l"
-alias la="ls -a"
 alias lla="ls -la"
 alias lt="ls --tree"
-alias cl="clear"
+
 
 # ZSH hotkeys
 bindkey '^ ' autosuggest-accept
-
-
