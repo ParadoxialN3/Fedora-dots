@@ -24,7 +24,6 @@ source $HOME/.zsh/ohmyzsh/lib/git.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Prompt
 PROMPT='[%*] %{$fg[cyan]%}%n%{$reset_color%}:%{$fg[green]%}%c%{$reset_color%}$(git_prompt_info) %(!.#.$) '
-
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}git:("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
 
