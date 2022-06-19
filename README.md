@@ -1,7 +1,15 @@
 # dotfiles
 
-A set of simple dotfiles for the applications I use, mostly just nvim and zsh
+A set of simple dotfiles for Fedora for the applications I use, consisting of my zsh configuration, settings for Alacritty and Kitty (even though I like Alacritty more) my light NeoVim config, as well as the config.el and init.el for DOOM Emacs.
 
-Its a fairly simple but powerful zsh configuration, with autocompletion, syntax hightlighting, and the geoffgarside prompt (best prompt) 
+ZSH has my favorite prompt, autocompletion, and syntax highlighting, which you can setup with `apply.sh`
 
-Enjoy
+`doom.sh` automates the process of installing DOOM Emacs as well as applying my configuration files on top of them (they just change some basic options, nothing fancy)
+
+You can also take a look at my wallpaper, and my GNOME Extensions (There are a lot)
+
+Nothing else to it really
+
+Have fun if you want to I guess
+
+![](wallpaper/demo.png)
