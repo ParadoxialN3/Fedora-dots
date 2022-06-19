@@ -1,10 +1,15 @@
-# History in histfile
+#istory in histfile
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
 
 # Making FZF able to search hidden files
 export FZF_DEFAULT_COMMAND="find -L"
+
+# Adding paths for DOOM Emacs if installed
+if [ -d "$HOME/.emacs.d/bin/" ];
+    then export PATH="$HOME/.emacs.d/bin:$PATH"
+fi
 
 # Basic auto/tab complete (stolen from Luke Smith yes) :
 autoload -U compinit
@@ -31,15 +36,12 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
 # My Aliases
 alias vi="nvim"
 alias vim="nvim"
+alias nv="nvim"
 alias ls="lsd -a"
-alias nixconfig="sudo nvim /etc/nixos/configuration.nix"
-alias nixrebuild="sudo nixos-rebuild switch"
 alias viminit="nvim $HOME/.config/nvim/init.vim"
-alias nixbuild="sudo nixos-rebuild build"
 alias l="ls -l"
 alias lla="ls -la"
 alias lt="ls --tree"
-
 
 # ZSH hotkeys
 bindkey '^ ' autosuggest-accept
