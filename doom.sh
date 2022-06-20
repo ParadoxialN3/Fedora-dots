@@ -3,7 +3,7 @@
 echo This script requires you to pay attention as there are some places where you will need to input something. First thing will be for your sudo password to install emacs.
 sleep 3
 sudo dnf install emacs ripgrep -y
-I will now install DOOM Emacs.
+echo I will now install DOOM Emacs.
 sleep 2
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 cp ~/dotfiles/.doom.d/config.el ~/.doom.d
