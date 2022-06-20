@@ -6,7 +6,7 @@ git clone https://github.com/ohmyzsh/ohmyzsh
 git clone https://github.com/olivierverdier/zsh-git-prompt
 git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting
-cd ~/Fedora-dots
+cd ~/dotfiles
 mv .zshrc ~
 mv .config ~
 sudo dnf install emacs alacritty nvim vim-enhanced nodejs npm yarnpkg -y
