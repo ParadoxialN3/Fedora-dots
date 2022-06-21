@@ -1,4 +1,4 @@
-#istory in histfile
+#History in histfile
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
