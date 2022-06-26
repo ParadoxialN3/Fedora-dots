@@ -13,3 +13,4 @@ sudo dnf install emacs alacritty nvim vim-enhanced nodejs npm yarnpkg -y
 cd $HOME/.local/share/nvim/plugged/coc.nvim && yarn install
 cd ~
 echo Look at the rest of the instructions and scripts as to how to install my GNOME customizations and DOOM Emacs
+sudo dnf install emacs ripgrep neovim zsh gh cmake rust rls cargo clang pip -y
