@@ -8,9 +8,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting
 cd ~/dotfiles
 mv .zshrc ~
-mv .config ~
-sudo dnf install emacs alacritty nvim vim-enhanced nodejs npm yarnpkg -y
-cd $HOME/.local/share/nvim/plugged/coc.nvim && yarn install
+mv .config/* ~/.config
 cd ~
 echo Look at the rest of the instructions and scripts as to how to install my GNOME customizations and DOOM Emacs
-sudo dnf install emacs ripgrep neovim zsh gh cmake rust rls cargo clang pip -y
+sudo dnf install alcritty vim-enhanced nodejs npm yarnpkg libtool ripgrep neovim zsh gh cmake rust rls cargo clang pip -y

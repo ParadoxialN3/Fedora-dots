@@ -11,6 +11,11 @@ if [ -d "$HOME/.emacs.d/bin/" ];
     then export PATH="$HOME/.emacs.d/bin:$PATH"
 fi
 
+# Other paths
+if [ -f "$HOME/.local/bin/*" ];
+    then export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # Basic auto/tab complete (stolen from Luke Smith yes) :
 autoload -U compinit
 zstyle ':completion:*' menu select
