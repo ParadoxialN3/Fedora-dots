@@ -4,7 +4,7 @@ A set of simple dotfiles for Fedora for the applications I use, consisting of my
 
 ZSH has my favorite prompt, autocompletion, and syntax highlighting, which you can setup with `apply.sh`
 
-`doom.sh` automates the process of installing DOOM Emacs as well as applying my configuration files on top of them (they just change some basic options, nothing fancy)
+`doom.sh` automates the process of installing DOOM Emacs (after its done put my configs and run `doom sync` in zsh or do it some other way idc)
 
 You can also take a look at my wallpaper, and my GNOME Extensions (There are a lot)
 
