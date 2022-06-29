@@ -16,6 +16,10 @@ if [ -f "$HOME/.local/bin/*" ];
     then export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.cargo/bin" ];
+    then export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # Basic auto/tab complete (stolen from Luke Smith yes) :
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -47,6 +51,8 @@ alias viminit="nvim $HOME/.config/nvim/init.vim"
 alias l="ls -l"
 alias lla="ls -la"
 alias lt="ls --tree"
+alias i3start="i3-msg restart"
+alias i3config="vim ~/.config/i3/config"	
 
 # ZSH hotkeys
 bindkey '^ ' autosuggest-accept
