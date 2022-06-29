@@ -20,6 +20,9 @@ if [ -d "$HOME/.cargo/bin" ];
     then export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# i will probably remove this one if i stop using polybar-themes
+export PATH="$HOME/networkmanager-dmenu:$PATH"
+
 # Basic auto/tab complete (stolen from Luke Smith yes) :
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -53,6 +56,8 @@ alias lla="ls -la"
 alias lt="ls --tree"
 alias i3start="i3-msg restart"
 alias i3config="vim ~/.config/i3/config"	
+alias emacsrs="systemctl restart --user emacs"
+
 
 # ZSH hotkeys
 bindkey '^ ' autosuggest-accept
