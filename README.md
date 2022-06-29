@@ -1,6 +1,8 @@
 # dotfiles
 
-A set of simple dotfiles for Fedora for the applications I use, consisting of my zsh configuration, settings for Alacritty and Kitty (even though I like Alacritty more) my light NeoVim config, as well as the config.el and init.el for DOOM Emacs.
+A set of dotfiles for Fedora for the applications I use, consisting of my zsh configuration, settings for Alacritty and Kitty (even though I like Alacritty more) my light NeoVim config, as well as the config.el and init.el for DOOM Emacs.
+
+Theres also my entire i3-gaps rice but I'mma gloss over that.
 
 ZSH has my favorite prompt, autocompletion, and syntax highlighting, which you can setup with `apply.sh`
 
