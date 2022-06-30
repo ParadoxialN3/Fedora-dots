@@ -27,7 +27,7 @@ font pango:JetBrainsMono Nerd Font Mono 9
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Gotta have the compositor
-exec_always --no-startup-id picom --config ~/.config/picom.conf &
+exec_always --no-startup-id picom --experimental-backends -bc
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -71,7 +71,7 @@ bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 #bindsym $mod+d exec --no-startup-id j4-dmenu-desktop [--dmenu="dmenu -i"] [--term="i3-sensible-terminal"]
 
 # little like bspwm
-for_window [class=".*"] split toggle
+#for_window [class=".*"] split toggle
 
 # A more modern dmenu replacement is rofi:
 #bindcode $mod+40 exec --no-startup-id rofi -show run
