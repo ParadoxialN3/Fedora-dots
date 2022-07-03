@@ -25,14 +25,19 @@ Plug 'preservim/tagbar'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim'
-Plug 'junegunn/fzf'
 Plug 'folke/which-key.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'romgrk/doom-one.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'folke/which-key.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
-colorscheme doom-one
-let g:airline_theme = 'gruvbox'
+colorscheme nord
+""let g:airline_theme = 'one-dark'
 
 let g:term_buf = 0
 let g:term_win = 0
@@ -66,7 +71,8 @@ tnoremap :q! <C-\><C-n>:q!<CR>
 let NERDTreeShowHidden=1
 
 nnoremap <F7> :NERDTreeToggle<CR>
-nnoremap <F5> :FZF<CR>
 nmap <F8> :TagbarToggle<CR>
+
+nnoremap <F5> :Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>
 
 

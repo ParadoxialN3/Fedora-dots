@@ -58,6 +58,5 @@ alias i3start="i3-msg restart"
 alias i3config="vim ~/.config/i3/config"	
 alias emacsrs="systemctl restart --user emacs"
 
-
 # ZSH hotkeys
 bindkey '^ ' autosuggest-accept
