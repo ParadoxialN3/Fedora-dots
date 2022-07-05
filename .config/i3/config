@@ -41,8 +41,7 @@ exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id killall flameshot && flameshot &
 
 # polybar
-#exec_always --no-startup-id killall polybar && polybar &
-exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
+#exec_always --no-startup-id killall polybar && ~/.config/polybar/launch.sh --forest
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -229,5 +228,26 @@ bindsym $mod+Shift+f exec --no-startup-id nautilus
 # finds out, if available)
 #bar {
 #        position top
-#		status_command i3status
+#		status_command py3status
 #}
+
+bar {
+    status_command ~/.local/bin/bumblebee-status \
+        -m xrandr hostname kernel datetime \
+        -p time.format ="%H:%M" \
+        -t iceberg-rainbow
+	position top
+
+	colors {
+                background #3B4252
+                statusline #1ABC9C
+                separator #1ABC9C
+                # colorclass       <border> <background> <text>
+                focused_workspace  #5E81AC  #BF616A  #1F2D3AS
+				active_workspace   #333333  #81A1C1  #ffffff
+                inactive_workspace #5E81AC  #81A1C1  #ffffff
+
+        }
+
+	
+}
