@@ -11,4 +11,5 @@ mv .zshrc ~
 mv .config/* ~/.config
 cd ~
 echo Look at the rest of the instructions and scripts as to how to install my GNOME customizations and DOOM Emacs
-sudo dnf install alcritty vim-enhanced nodejs npm yarnpkg libtool ripgrep neovim zsh gh cmake rust rls cargo clang pip i3-gaps i3-gaps-doc nitrogen picom j4-dmenu-desktop feh flameshot -y
+sudo dnf install alcritty vim-enhanced nodejs xset npm yarnpkg libtool ripgrep neovim zsh gh cmake rust rls cargo clang pip i3-gaps i3-gaps-doc nitrogen picom j4-dmenu-desktop feh flameshot -y
+pip install --user bumblebee-status
