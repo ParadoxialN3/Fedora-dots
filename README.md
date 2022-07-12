@@ -2,7 +2,7 @@
 
 A set of dotfiles for Fedora for the applications I use, consisting of my zsh configuration, settings for Alacritty and Kitty (even though I like Alacritty more) my light NeoVim config, as well as the config.el and init.el for DOOM Emacs.
 
-God i'm starting to look into wayland alternatives whats wrong with me 
+God i'm starting to look into wayland alternatives whats wrong with me lol
 
 Theres also my entire i3-gaps rice that very badly uses the nord color scheme but I'mma gloss over that.
 
