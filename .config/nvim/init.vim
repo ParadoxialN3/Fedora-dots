@@ -34,10 +34,12 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'folke/which-key.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
-colorscheme nord
+colorscheme onedark
 ""let g:airline_theme = 'one-dark'
+highlight Normal ctermbg=NONE guibg=NONE
 
 let g:term_buf = 0
 let g:term_win = 0
@@ -74,5 +76,7 @@ nnoremap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 nnoremap <F5> :Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>
+
+set guifont=CaskaydiaCove\Nerd\Font:h14
 
 

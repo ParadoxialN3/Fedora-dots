@@ -5,23 +5,20 @@ SAVEHIST=5000
 
 # Making FZF able to search hidden files
 export FZF_DEFAULT_COMMAND="find -L"
-
+export TERM="xterm-256color"
 # Adding paths for DOOM Emacs if installed
 if [ -d "$HOME/.emacs.d/bin/" ];
     then export PATH="$HOME/.emacs.d/bin:$PATH"
 fi
 
 # Other paths
-if [ -f "$HOME/.local/bin/*" ];
+if [ -d "$HOME/.local/bin/" ];
     then export PATH="$HOME/.local/bin:$PATH"
 fi
 
 if [ -d "$HOME/.cargo/bin" ];
     then export PATH="$HOME/.cargo/bin:$PATH"
 fi
-
-# i will probably remove this one if i stop using polybar-themes
-export PATH="$HOME/networkmanager-dmenu:$PATH"
 
 # Basic auto/tab complete (stolen from Luke Smith yes) :
 autoload -U compinit
@@ -41,9 +38,9 @@ source $HOME/.zsh/ohmyzsh/lib/git.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Prompt
-PROMPT='[%*] %{$fg[cyan]%}%n%{$reset_color%}:%{$fg[green]%}%c%{$reset_color%}$(git_prompt_info) %(!.#.$) '
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}git:("
-ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
+#PROMPT='[%*] %{$fg[cyan]%}%n%{$reset_color%}:%{$fg[green]%}%c%{$reset_color%}$(git_prompt_info) %(!.#.$) '
+#ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}git:("
+#ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
 
 # My Aliases
 alias vi="nvim"
@@ -57,6 +54,10 @@ alias lt="ls --tree"
 alias i3start="i3-msg restart"
 alias i3config="vim ~/.config/i3/config"	
 alias emacsrs="systemctl restart --user emacs"
-
+alias emacs="emacsclient -c -a 'emacs'"
+alias neofetch="neofetch --ascii_distro void"
 # ZSH hotkeys
 bindkey '^ ' autosuggest-accept
+
+# Starship prompt
+eval "$(starship init zsh)"
