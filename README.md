@@ -1,5 +1,8 @@
 # dotfiles
 
+This is old as shit as I no longer use Fedora on my personal machine, I use Void Linux. I will try to migrate to a new repository with some bootstrapping scripts as well as possibly ;looking into making a build server that makes nightly ISO's with my configs. Use at your own risk. 
+
+
 A set of dotfiles for Fedora for the applications I use, consisting of my zsh configuration, settings for Alacritty and Kitty (even though I like Alacritty more) my light NeoVim config, as well as the config.el and init.el for DOOM Emacs.
 
 God i'm starting to look into wayland alternatives whats wrong with me lol
